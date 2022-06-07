@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios clase 6</title>
+</head>
+
+<body>
+    <h1>Ejercicios sincrónicos 01</h1>
+    <script>
+        //1. Creá una Variable llamada miAuto y asignale un Objeto vacío.
+        // 2. Asignale a miAuto una Propiedad marca, que a su vez contenga un String.
+        //3. Agregá una Propiedad año que contenga un número entero.
+        //4. Agregá una Propiedad nuevo que contenga un booleano.
+        //5. Creá una Variable llamada propertyKey y asignale el String "modelo"
+        //6. Agregá la Propiedad modelo al Objeto miAuto.
+        //7. Creá una Variable llamada anotherPropertyKey y dale el Valor "precio".
+        //8. Cuantificá el Valor de tu auto.
+        //9. Asigná la String "color" a una Variable nueva llamada nextProperty.
+        //10.Usá la variable nextProperty para añadir el color a tu auto.
+        //11.Usá el loop for...in para iterar sobre el Objeto miAuto y que muestre en
+        //la consola el key y el value de cada Propiedad.
+
+        const miAuto = {
+            marca: 'suzuki',
+            año: 2020,
+            nuevo: false,
+
+        }
+        const propertyKey = ' modelo ';
+        miAuto[propertyKey] = ' alto ';
+
+        const anotherPropertyKey = ' precio '
+        miAuto[anotherPropertyKey] = 4000000;
+
+        const nextProperty = ' color ';
+        miAuto[nextProperty] = ' rojo ';
+
+        for (let propiedad in miAuto) {
+            console.log(propiedad + ' : ' + miAuto[propiedad]);
+        }
+
+    </script>
+
+    <h2>Ejercicio asincrónico 02</h2>
+
+    <script>
+        /*En este ejercicio, deberás crear un Arreglo llamado películas, que tenga -por cada película- un Objeto con las siguientes Propiedades:
+● titulo
+● rating
+● loHasVisto
+Usá un for loop para iterar sobre el Arreglo e imprimir un resultado en la consola*/
+
+        const peliculas = [
+            {
+                titulo: 'spiderman',
+                rating: 4,
+                loHasVisto: true
+            },
+            {
+                titulo: 'matrix',
+                rating: 5,
+                loHasVisto: true
+            },
+            {
+                titulo: 'avatar',
+                rating: 3,
+                loHasVisto: false
+            },
+        ]
+        let mensaje = '';
+        for (let pelicula in peliculas) {
+            (peliculas[pelicula][loHasVisto]) ? mensaje = 'Viste' : mensaje = 'No viste';
+            console.log(mensaje + '' + peliculas[pelicula][titulo])
+        }
+
+    </script>
+
+    <h3>Ejercicio asincrónico 03</h3>
+
+    <script>
+        /* Debés crear una función llamada 'arregloDeObjetos' que reciba un número y una
+        palabra como parámetro y devuelva un arreglo de objetos que tenga: una
+        propiedad llamada como la palabra pasada por parámetro y el valor del número y
+        sus anteriores */
+
+        function arregloDeObjetos(num, palabra) {
+            const objeto = {}
+            const arreglo = []
+            const propiedadclave = palabra
+
+            for (let i = 0; i < num; i++);
+            objeto[propiedadclave] = i + 1
+            propiedadclave[i] = { [propiedadclave]: i + 1 }
+        }
+        return arreglo
+
+    </script>
+</body>
+
+</html>
